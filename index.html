@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO-FRANÇAIS: LE PROTOCOLE FUTURISTE 🎓🔮🤖</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        solar: {
+                            50: '#fffbe1',
+                            100: '#fff3b8',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        cyber: {
+                            cyan: '#06b6d4',
+                            magenta: '#ec4899',
+                            violet: '#8b5cf6',
+                            emerald: '#10b981',
+                            bg: '#0c0f1d'
+                        }
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s infinite ease-in-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'shimmer': 'shimmer 2.5s infinite linear'
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 15px rgba(245, 158, 11, 0.4), 0 0 30px rgba(6, 182, 212, 0.3)' },
+                            '50%': { boxShadow: '0 0 25px rgba(236, 72, 153, 0.6), 0 0 45px rgba(139, 92, 246, 0.5)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Space+Grotesk:wght@400;600;700&family=Cinzel:wght@600;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #0c0f1d 70%, #050711 100%);
+            background-attachment: fixed;
+            color: #f3f4f6;
+            min-height: 100vh;
+        }
+
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .diploma-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .glass-panel {
+            background: rgba(22, 27, 46, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-button {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-button:hover:not(:disabled) {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.4);
+            border-color: rgba(245, 158, 11, 0.6);
+        }
+
+        .solar-gradient-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #f43f5e 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #b45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cyber-gradient-btn {
+            background: linear-gradient(135deg, #f59e0b 0%, #ec4899 50%, #8b5cf6 100%);
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.35);
+        }
+
+        .cyber-gradient-btn:hover {
+            box-shadow: 0 6px 22px rgba(245, 158, 11, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Certificate Print Styling */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #certificatePrintArea, #certificatePrintArea * {
+                visibility: visible;
+            }
+            #certificatePrintArea {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                background: #0d1117 !important;
+                color: #ffffff !important;
+            }
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0f1d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body class="selection:bg-amber-500 selection:text-black overflow-x-hidden pb-24">
+
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- MAIN APP CONTAINER -->
+    <div id="app" class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-4">
+
+        <!-- HEADER HUD -->
+        <header class="glass-panel rounded-2xl p-4 mb-6 transition-all duration-300 border-amber-500/30">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                
+                <!-- Logo & Title -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="app.navigateTo('dashboard')">
+                    <div class="relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 animate-pulse-glow text-2xl shadow-lg">
+                        🎓
+                    </div>
+                    <div>
+                        <h1 class="heading-font text-2xl sm:text-3xl font-black tracking-tight leading-none solar-gradient-text">
+                            NEO-FRANÇAIS
+                        </h1>
+                        <p class="text-xs font-semibold text-amber-300/80 tracking-widest uppercase flex items-center gap-1 mt-1">
+                            <span>🔮 Le Protocole Futuriste</span>
+                            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- HUD Vitals / Stats -->
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-slate-900/60 p-2.5 rounded-xl border border-white/10">
+                    
+                    <!-- Hearts / Lives -->
+                    <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-950/40 border border-rose-500/30 text-rose-300 text-sm font-bold" title="Vies / Lives">
+                        <span class="text-base animate-bounce">❤️</span>
+                        <span id="hudHearts">3/3</span>
+                    </div>
+
+                    <!-- Energy Battery -->
+                    <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-950/40 border border-amber-500/30 text-amber-300 text-sm font-bold" title="Énergie">
+                        <span class="text-base">🔋</span>
+                        <div class="w-14 bg-slate-800 rounded-full h-2.5 overflow-hidden border border-amber-500/30">
+                            <div id="hudEnergyBar" class="bg-gradient-to-r from-amber-500 to-yellow-300 h-2.5 rounded-full transition-all duration-300" style="width: 100%"></div>
+                        </div>
+                        <span id="hudEnergyText" class="text-xs">100%</span>
+                    </div>
+
+                    <!-- Streak Flame -->
+                    <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-950/40 border border-orange-500/30 text-orange-400 text-sm font-bold" title="Série de victoires">
+                        <span class="text-base">🔥</span>
+                        <span id="hudStreak">0</span>
+                    </div>
+
+                    <!-- Cyber XP -->
+                    <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-950/40 border border-purple-500/30 text-purple-300 text-sm font-bold" title="XP accumulée">
+                        <span class="text-base">✨</span>
+                        <span id="hudXP">0 XP</span>
+                    </div>
+
+                    <!-- Certificate Quick Trigger Button -->
+                    <button id="hudCertBtn" onclick="app.openCertificateFlow()" class="px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/50 text-amber-300 text-xs font-black transition flex items-center gap-1">
+                        🎓 <span>Certificat</span>
+                    </button>
+
+                    <!-- Badges Modal Trigger -->
+                    <button onclick="app.toggleBadgesModal()" class="px-3 py-1.5 rounded-lg bg-cyan-950/40 hover:bg-cyan-900/50 border border-cyan-500/30 text-cyan-300 text-xs font-bold transition flex items-center gap-1">
+                        🏆 <span class="hidden sm:inline">Insignes</span>
+                    </button>
+
+                    <!-- Mute / Sound Toggle -->
+                    <button id="soundToggleBtn" onclick="soundEngine.toggleMute()" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 transition" title="Activer/Désactiver le son">
+                        🔊
+                    </button>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- MASCOT / HOLO-GUIDE LUMIÈRE BAR -->
+        <div id="mascotBar" class="glass-panel rounded-2xl p-4 mb-6 border-cyan-500/30 relative overflow-hidden transition-all duration-300">
+            <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl"></div>
+            <div class="flex items-center gap-4">
+                <div class="relative flex-shrink-0">
+                    <div id="lumiereAvatar" class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-cyan-500 via-teal-400 to-amber-300 p-0.5 shadow-lg shadow-cyan-500/20 animate-float flex items-center justify-center text-3xl">
+                        🤖
+                    </div>
+                    <span class="absolute -bottom-1 -right-1 flex h-4 w-4">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500"></span>
+                    </span>
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-sm font-bold text-cyan-400 uppercase tracking-wider flex items-center gap-1">
+                            <span>Lumière 🤖✨</span>
+                            <span class="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-500/30">IA-Guide Holographique</span>
+                        </h2>
+                    </div>
+                    <p id="lumiereSpeech" class="text-sm sm:text-base text-slate-200 mt-1 italic font-medium">
+                        "Bonjour Cyber-Apprenant ! Réussis tous les défis dans l'ordre pour débloquer ton Certificat de Maîtrise !" 🌟
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN VIEW ROUTER -->
+        <main id="mainContent">
+            <!-- Content views loaded dynamically via JS -->
+        </main>
+
+    </div> <!-- /#app -->
+
+    <!-- FRENCH ACCENT KEYBOARD FLOATING BAR -->
+    <div id="accentKeyboard" class="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 glass-panel px-4 py-2.5 rounded-2xl border border-amber-500/40 shadow-2xl flex items-center gap-1.5 overflow-x-auto max-w-[95vw] sm:max-w-max">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest mr-1 hidden sm:inline">Clavier ✍️:</span>
+        <button onclick="app.insertAccent('é')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">é</button>
+        <button onclick="app.insertAccent('è')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">è</button>
+        <button onclick="app.insertAccent('ê')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">ê</button>
+        <button onclick="app.insertAccent('à')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">à</button>
+        <button onclick="app.insertAccent('â')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">â</button>
+        <button onclick="app.insertAccent('ù')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">ù</button>
+        <button onclick="app.insertAccent('û')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">û</button>
+        <button onclick="app.insertAccent('ç')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">ç</button>
+        <button onclick="app.insertAccent('œ')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">œ</button>
+        <button onclick="app.insertAccent('î')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">î</button>
+        <button onclick="app.insertAccent('ï')" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-black font-bold text-sm transition border border-white/10">ï</button>
+        <div class="h-5 w-px bg-white/20 mx-1"></div>
+        <button onclick="app.insertAccent('🔮')" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-base">🔮</button>
+        <button onclick="app.insertAccent('🎓')" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-base">🎓</button>
+        <button onclick="app.insertAccent('🚀')" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-base">🚀</button>
+    </div>
+
+    <!-- BADGES MODAL -->
+    <div id="badgesModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-panel max-w-2xl w-full rounded-3xl p-6 border-amber-500/40 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="app.toggleBadgesModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl font-bold p-2">✕</button>
+            
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-black heading-font solar-gradient-text flex items-center justify-center gap-2">
+                    🏆 Galerie des Insignes Cyber-Linguistiques
+                </h3>
+                <p class="text-sm text-slate-400 mt-1">Accomplis tous les défis pour débloquer ces trophées futuristes !</p>
+            </div>
+
+            <div id="badgesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Badges rendered dynamically -->
+            </div>
+
+            <div class="mt-6 text-center">
+                <button onclick="app.toggleBadgesModal()" class="cyber-gradient-btn px-6 py-2.5 rounded-xl text-black font-bold text-sm">
+                    Fermer la Galerie 🚀
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICATE USER INPUT FORM MODAL -->
+    <div id="certFormModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-panel max-w-lg w-full rounded-3xl p-6 sm:p-8 border-amber-500/50 relative shadow-2xl animate-pulse-glow">
+            <button onclick="app.closeCertFormModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl font-bold">✕</button>
+
+            <div class="text-center mb-6">
+                <div class="text-5xl mb-2">🎓📜</div>
+                <h3 class="text-2xl font-black heading-font gold-gradient-text">
+                    Émission du Certificat Global
+                </h3>
+                <p class="text-xs text-slate-300 mt-1">
+                    Félicitations pour avoir accompli TOUS les défis ! Saisis les données pour générer ton diplôme futuriste.
+                </p>
+            </div>
+
+            <form onsubmit="app.submitCertificateForm(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-amber-300 mb-1">
+                        Nom Complet de l'Élève / Nombre Completo del Alumno *
+                    </label>
+                    <input type="text" id="certStudentInput" required placeholder="Ex. Jean Dupont" class="w-full bg-slate-950 border border-amber-500/40 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm font-semibold">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-cyan-300 mb-1">
+                        Nom du Professeur / Nombre del Profesor *
+                    </label>
+                    <input type="text" id="certTeacherInput" required placeholder="Ex. Prof. Alexander Wright" class="w-full bg-slate-950 border border-cyan-500/40 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 text-sm font-semibold">
+                </div>
+
+                <div class="pt-3 flex gap-3">
+                    <button type="button" onclick="app.closeCertFormModal()" class="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold">
+                        Annuler
+                    </button>
+                    <button type="submit" class="cyber-gradient-btn px-6 py-3 rounded-xl text-black font-extrabold text-sm flex-1">
+                        Générer le Certificat 🎓📜
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- CERTIFICATE DIPLOMA DISPLAY MODAL -->
+    <div id="certificateModal" class="fixed inset-0 bg-black/90 backdrop-blur-xl z-50 flex items-center justify-center p-2 sm:p-6 hidden overflow-y-auto">
+        <div class="max-w-4xl w-full my-auto relative">
+            <button onclick="app.closeCertificateModal()" class="absolute -top-10 right-0 text-amber-400 hover:text-white text-3xl font-bold bg-slate-900/80 px-3 py-1 rounded-xl border border-amber-500/40 z-50">✕</button>
+
+            <!-- PRINTABLE CERTIFICATE CARD -->
+            <div id="certificatePrintArea" class="bg-slate-950 border-4 border-amber-500/60 rounded-3xl p-6 sm:p-10 text-center relative shadow-2xl overflow-hidden">
+                <!-- Futuristic watermark & accents -->
+                <div class="absolute -top-24 -left-24 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute inset-4 border border-dashed border-amber-400/30 rounded-2xl pointer-events-none"></div>
+
+                <!-- Academic Header Badge -->
+                <div class="flex justify-center mb-4">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-3xl shadow-lg border border-amber-300">
+                        🎓
+                    </div>
+                </div>
+
+                <p class="text-xs uppercase font-extrabold tracking-widest text-amber-400 mb-1">
+                    ACADÉMIE NEURONALE DE LANGUES FUTURISTES
+                </p>
+
+                <h2 class="diploma-font text-2xl sm:text-4xl font-black gold-gradient-text tracking-wide uppercase my-2">
+                    CERTIFICAT DE MAÎTRISE GLOBALE
+                </h2>
+
+                <p class="text-xs text-cyan-300 tracking-widest uppercase mb-6 font-bold">
+                    PROTOCOLE NEO-FRANÇAIS • ACCRÉDITATION TOUS DEFIS VALIDÉS 📜
+                </p>
+
+                <div class="w-32 h-0.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-6"></div>
+
+                <p class="text-sm text-slate-300 italic">
+                    Attesté officiellement et décerné avec honneur à :
+                </p>
+
+                <h3 id="certDisplayStudent" class="diploma-font text-2xl sm:text-4xl font-bold text-white tracking-wider my-4 border-b border-amber-500/30 pb-2 inline-block px-8">
+                    [Nom de l'Élève]
+                </h3>
+
+                <p class="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed mt-2">
+                    Pour avoir validé avec succès <strong>l'intégralité des 5 défis du Protocole Futuriste</strong> (Futur Simple, Pronoms COD/COI, Vocabulaire High-Tech, Pronoms Adverbiaux Y/EN, et Futur Proche).
+                </p>
+
+                <!-- Details Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-8 max-w-xl mx-auto text-left bg-slate-900/60 p-4 rounded-2xl border border-white/10">
+                    <div>
+                        <span class="text-[10px] text-amber-400 uppercase font-bold block">Professeur Encadrant :</span>
+                        <span id="certDisplayTeacher" class="text-sm font-bold text-slate-100">Prof. Alexander Wright</span>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-cyan-400 uppercase font-bold block">Date d'Émission :</span>
+                        <span id="certDisplayDate" class="text-sm font-bold text-slate-100">22 Septembre 2026</span>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-purple-400 uppercase font-bold block">Code de Vérification :</span>
+                        <span id="certDisplayHash" class="text-xs font-mono font-bold text-purple-300">NEO-FR-2026-ALL5</span>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-emerald-400 uppercase font-bold block">Statut du Protocole :</span>
+                        <span class="text-xs font-bold text-emerald-300 flex items-center gap-1">5/5 Défis Reussis ✅</span>
+                    </div>
+                </div>
+
+                <!-- Signatures -->
+                <div class="flex flex-wrap justify-around items-end gap-6 pt-4 border-t border-white/10">
+                    <div class="text-center">
+                        <div class="diploma-font text-sm text-amber-300 font-bold italic mb-1" id="certSignatureTeacher">Prof. Alexander Wright</div>
+                        <div class="w-36 h-0.5 bg-amber-500/40 mx-auto"></div>
+                        <span class="text-[10px] text-slate-400 uppercase tracking-widest mt-1 block">Direction Pédagogique</span>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-2xl mb-1">🤖🎓</div>
+                        <div class="w-36 h-0.5 bg-cyan-500/40 mx-auto"></div>
+                        <span class="text-[10px] text-cyan-300 uppercase tracking-widest mt-1 block">Lumière IA Guide</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ACTION BUTTONS -->
+            <div class="mt-4 flex flex-wrap justify-center gap-4">
+                <button onclick="window.print()" class="cyber-gradient-btn px-6 py-3 rounded-2xl text-black font-extrabold text-sm flex items-center gap-2">
+                    🖨️ Imprimer / Enregistrer en PDF
+                </button>
+                <button onclick="app.closeCertificateModal()" class="px-6 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm">
+                    Fermer 🚀
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * WEB AUDIO SYNTHESIZER FOR SFX
+         */
+        class SoundEngine {
+            constructor() {
+                this.ctx = null;
+                this.muted = false;
+            }
+
+            init() {
+                if (!this.ctx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    this.ctx = new AudioContext();
+                }
+            }
+
+            toggleMute() {
+                this.muted = !this.muted;
+                const btn = document.getElementById('soundToggleBtn');
+                btn.innerHTML = this.muted ? '🔇' : '🔊';
+                btn.classList.toggle('opacity-50', this.muted);
+            }
+
+            playCorrect() {
+                if (this.muted) return;
+                this.init();
+                const now = this.ctx.currentTime;
+                const freqs = [523.25, 659.25, 783.99, 1046.50];
+                freqs.forEach((freq, i) => {
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, now + i * 0.08);
+                    
+                    gain.gain.setValueAtTime(0, now + i * 0.08);
+                    gain.gain.linearRampToValueAtTime(0.15, now + i * 0.08 + 0.02);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.08 + 0.35);
+                    
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start(now + i * 0.08);
+                    osc.stop(now + i * 0.08 + 0.4);
+                });
+            }
+
+            playWrong() {
+                if (this.muted) return;
+                this.init();
+                const now = this.ctx.currentTime;
+                
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(180, now);
+                osc.frequency.exponentialRampToValueAtTime(90, now + 0.3);
+                
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+                
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+                osc.start(now);
+                osc.stop(now + 0.3);
+            }
+
+            playLevelUp() {
+                if (this.muted) return;
+                this.init();
+                const now = this.ctx.currentTime;
+                const freqs = [440, 554.37, 659.25, 880, 1108.73, 1318.51];
+                freqs.forEach((freq, i) => {
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, now + i * 0.06);
+                    
+                    gain.gain.setValueAtTime(0.2, now + i * 0.06);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.06 + 0.4);
+                    
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start(now + i * 0.06);
+                    osc.stop(now + i * 0.06 + 0.5);
+                });
+            }
+
+            playClick() {
+                if (this.muted) return;
+                this.init();
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(800, now);
+                osc.frequency.exponentialRampToValueAtTime(400, now + 0.05);
+                
+                gain.gain.setValueAtTime(0.05, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+                
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+                osc.start(now);
+                osc.stop(now + 0.05);
+            }
+        }
+
+        const soundEngine = new SoundEngine();
+
+        /**
+         * CANVAS PARTICLE SYSTEM FOR CELEBRATIONS
+         */
+        class ParticleEngine {
+            constructor() {
+                this.canvas = document.getElementById('particleCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.resize();
+                window.addEventListener('resize', () => this.resize());
+                this.animate();
+            }
+
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+
+            burst(x = window.innerWidth / 2, y = window.innerHeight / 3, count = 40) {
+                const colors = ['#fbbf24', '#f43f5e', '#c084fc', '#06b6d4', '#10b981', '#ffffff'];
+                for (let i = 0; i < count; i++) {
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = Math.random() * 8 + 2;
+                    this.particles.push({
+                        x: x,
+                        y: y,
+                        vx: Math.cos(angle) * speed,
+                        vy: Math.sin(angle) * speed - 2,
+                        size: Math.random() * 7 + 3,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        alpha: 1,
+                        decay: Math.random() * 0.02 + 0.015,
+                        rotation: Math.random() * 360,
+                        vRot: (Math.random() - 0.5) * 10
+                    });
+                }
+            }
+
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                for (let i = this.particles.length - 1; i >= 0; i--) {
+                    const p = this.particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy += 0.12;
+                    p.alpha -= p.decay;
+                    p.rotation += p.vRot;
+
+                    if (p.alpha <= 0) {
+                        this.particles.splice(i, 1);
+                        continue;
+                    }
+
+                    this.ctx.save();
+                    this.ctx.translate(p.x, p.y);
+                    this.ctx.rotate((p.rotation * Math.PI) / 180);
+                    this.ctx.globalAlpha = p.alpha;
+                    this.ctx.fillStyle = p.color;
+                    this.ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+                    this.ctx.restore();
+                }
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        const particleEngine = new ParticleEngine();
+    </script>
+
+    <script>
+        /**
+         * APP STATE & DATA MODEL
+         */
+        const initialData = {
+            hearts: 3,
+            maxHearts: 3,
+            energy: 100,
+            streak: 0,
+            xp: 0,
+            studentName: '',
+            teacherName: '',
+            completedModules: {
+                m1: false,
+                m2: false,
+                m3: false,
+                m4: false,
+                m5: false
+            },
+            badges: [
+                { id: 'futur_master', name: 'Mage du Futur 🔮', desc: 'Maîtrise la conjugaison du Futur Simple', icon: '🔮', unlocked: false },
+                { id: 'pronoun_sniper', name: 'Sniper des Pronoms 🎯', desc: 'Réussis sans faute les COD & COI', icon: '🎯', unlocked: false },
+                { id: 'cyber_linguist', name: 'Cyber-Linguiste 💻', desc: 'Domine le vocabulaire high-tech', icon: '💻', unlocked: false },
+                { id: 'lumiere_friend', name: 'Ami de Lumière 🤖', desc: 'Complète un dialogue avec Y et EN', icon: '🤖', unlocked: false },
+                { id: 'rocket_builder', name: 'Ingénieur Spatiale 🚀', desc: 'Assemble parfaitement le Futur Proche', icon: '🚀', unlocked: false },
+                { id: 'high_energy', name: 'Batterie Absolue ⚡', desc: 'Atteins un score de 200 XP', icon: '⚡', unlocked: false }
+            ]
+        };
+
+        class NeoFrancaisApp {
+            constructor() {
+                this.state = this.loadState();
+                this.currentModule = 'dashboard';
+                this.lastActiveInput = null;
+                this.moduleStates = {};
+                this.init();
+            }
+
+            loadState() {
+                const saved = localStorage.getItem('neo_francais_save_v3');
+                return saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(initialData));
+            }
+
+            saveState() {
+                localStorage.setItem('neo_francais_save_v3', JSON.stringify(this.state));
+                this.updateHUD();
+            }
+
+            init() {
+                this.updateHUD();
+                this.renderBadgesGrid();
+                this.navigateTo('dashboard');
+
+                document.addEventListener('focusin', (e) => {
+                    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                        this.lastActiveInput = e.target;
+                    }
+                });
+            }
+
+            updateHUD() {
+                document.getElementById('hudHearts').innerText = `${this.state.hearts}/${this.state.maxHearts}`;
+                document.getElementById('hudEnergyBar').style.width = `${this.state.energy}%`;
+                document.getElementById('hudEnergyText').innerText = `${this.state.energy}%`;
+                document.getElementById('hudStreak').innerText = this.state.streak;
+                document.getElementById('hudXP').innerText = `${this.state.xp} XP`;
+
+                // Check total completion
+                const completedCount = Object.values(this.state.completedModules).filter(Boolean).length;
+                const certBtn = document.getElementById('hudCertBtn');
+                if (completedCount === 5) {
+                    certBtn.classList.add('animate-pulse', 'border-emerald-400', 'text-emerald-300');
+                    certBtn.innerHTML = '🎓 <span>Certificat Débloqué ✅</span>';
+                } else {
+                    certBtn.innerHTML = `🎓 <span>Certificat (${completedCount}/5)</span>`;
+                }
+
+                if (this.state.xp >= 200) this.unlockBadge('high_energy');
+            }
+
+            speakLumiere(text, mood = 'happy') {
+                const speech = document.getElementById('lumiereSpeech');
+                const avatar = document.getElementById('lumiereAvatar');
+                
+                const emojis = {
+                    happy: '🤖',
+                    cheering: '🤖✨',
+                    thinking: '🤔🤖',
+                    oops: '😳🤖',
+                    party: '🥳🤖'
+                };
+
+                avatar.innerText = emojis[mood] || '🤖';
+                speech.innerHTML = `"${text}"`;
+            }
+
+            addXP(amount) {
+                this.state.xp += amount;
+                this.state.streak += 1;
+                this.state.energy = Math.min(100, this.state.energy + 5);
+                soundEngine.playCorrect();
+                particleEngine.burst();
+                this.saveState();
+            }
+
+            loseLife() {
+                this.state.hearts = Math.max(0, this.state.hearts - 1);
+                this.state.streak = 0;
+                this.state.energy = Math.max(0, this.state.energy - 15);
+                soundEngine.playWrong();
+                this.saveState();
+
+                if (this.state.hearts === 0) {
+                    this.showGameOverModal();
+                }
+            }
+
+            rechargeHearts() {
+                this.state.hearts = this.state.maxHearts;
+                this.state.energy = 100;
+                this.speakLumiere("Batterie rechargée à 100% ! Reviens dans la course ! ⚡❤️", "party");
+                soundEngine.playLevelUp();
+                this.saveState();
+            }
+
+            insertAccent(char) {
+                soundEngine.playClick();
+                if (this.lastActiveInput) {
+                    const start = this.lastActiveInput.selectionStart || 0;
+                    const end = this.lastActiveInput.selectionEnd || 0;
+                    const val = this.lastActiveInput.value;
+                    this.lastActiveInput.value = val.substring(0, start) + char + val.substring(end);
+                    this.lastActiveInput.selectionStart = this.lastActiveInput.selectionEnd = start + char.length;
+                    this.lastActiveInput.focus();
+                }
+            }
+
+            unlockBadge(badgeId) {
+                const badge = this.state.badges.find(b => b.id === badgeId);
+                if (badge && !badge.unlocked) {
+                    badge.unlocked = true;
+                    this.saveState();
+                    soundEngine.playLevelUp();
+                    particleEngine.burst(window.innerWidth / 2, window.innerHeight / 2, 60);
+                    this.speakLumiere(`Nouveau Badge Débloqué ! 🏆 ${badge.name}`, "party");
+                    this.renderBadgesGrid();
+                }
+            }
+
+            toggleBadgesModal() {
+                soundEngine.playClick();
+                const modal = document.getElementById('badgesModal');
+                modal.classList.toggle('hidden');
+            }
+
+            renderBadgesGrid() {
+                const container = document.getElementById('badgesGrid');
+                container.innerHTML = this.state.badges.map(b => `
+                    <div class="p-4 rounded-2xl ${b.unlocked ? 'bg-gradient-to-r from-amber-500/20 to-purple-500/20 border-amber-500/50' : 'bg-slate-900/40 border-white/5 opacity-50'} border flex items-center gap-3">
+                        <div class="text-3xl p-3 rounded-xl bg-slate-800 border border-white/10">
+                            ${b.unlocked ? b.icon : '🔒'}
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm ${b.unlocked ? 'text-amber-300' : 'text-slate-400'}">${b.name}</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">${b.desc}</p>
+                            <span class="inline-block text-[10px] uppercase font-extrabold mt-1 px-2 py-0.5 rounded ${b.unlocked ? 'bg-emerald-500/20 text-emerald-300' : 'bg-slate-800 text-slate-500'}">
+                                ${b.unlocked ? 'Débloqué ✅' : 'Verrouillé 🔒'}
+                            </span>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            showGameOverModal() {
+                const main = document.getElementById('mainContent');
+                main.innerHTML = `
+                    <div class="glass-panel max-w-lg mx-auto rounded-3xl p-8 text-center border-rose-500/50 my-10 animate-pulse-glow">
+                        <div class="text-6xl mb-4">💔⚡</div>
+                        <h2 class="text-3xl font-black heading-font text-rose-400">Énergie Épuisée !</h2>
+                        <p class="text-slate-300 mt-2">Tes batteries cybernétiques sont à plat. Recharge tes vies pour continuer le protocole !</p>
+                        <div class="mt-8 flex justify-center gap-4">
+                            <button onclick="app.rechargeHearts(); app.navigateTo('dashboard');" class="cyber-gradient-btn px-8 py-3 rounded-2xl text-black font-extrabold text-base shadow-lg">
+                                🔋 Recharger à 100%
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            /* SEQUENTIAL PROGRESSION LOCK CHECKER */
+            isModuleUnlocked(moduleKey) {
+                if (moduleKey === 'dashboard' || moduleKey === 'module1') return true;
+                const c = this.state.completedModules;
+                if (moduleKey === 'module2') return c.m1;
+                if (moduleKey === 'module3') return c.m2;
+                if (moduleKey === 'module4') return c.m3;
+                if (moduleKey === 'module5') return c.m4;
+                return false;
+            }
+
+            /* CERTIFICATE FLOW LOGIC */
+            openCertificateFlow() {
+                soundEngine.playClick();
+                const completedCount = Object.values(this.state.completedModules).filter(Boolean).length;
+                if (completedCount < 5) {
+                    this.speakLumiere(`🔒 Le Certificat Officiel s'obtient après avoir réussi les 5 défis ! (Progression : ${completedCount}/5 complétés).`, "thinking");
+                    return;
+                }
+                if (!this.state.studentName || !this.state.teacherName) {
+                    this.openCertFormModal();
+                } else {
+                    this.showCertificateModal();
+                }
+            }
+
+            openCertFormModal() {
+                document.getElementById('certStudentInput').value = this.state.studentName || '';
+                document.getElementById('certTeacherInput').value = this.state.teacherName || '';
+                document.getElementById('certFormModal').classList.remove('hidden');
+            }
+
+            closeCertFormModal() {
+                document.getElementById('certFormModal').classList.add('hidden');
+            }
+
+            submitCertificateForm(e) {
+                e.preventDefault();
+                soundEngine.playClick();
+                const student = document.getElementById('certStudentInput').value.trim();
+                const teacher = document.getElementById('certTeacherInput').value.trim();
+
+                if (student && teacher) {
+                    this.state.studentName = student;
+                    this.state.teacherName = teacher;
+                    this.saveState();
+                    this.closeCertFormModal();
+                    this.showCertificateModal();
+                }
+            }
+
+            showCertificateModal() {
+                document.getElementById('certDisplayStudent').innerText = this.state.studentName || 'Élève Cyber';
+                document.getElementById('certDisplayTeacher').innerText = this.state.teacherName || 'Prof. Alexander Wright';
+                document.getElementById('certSignatureTeacher').innerText = this.state.teacherName || 'Prof. Alexander Wright';
+                
+                const now = new Date();
+                const formattedDate = now.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+                document.getElementById('certDisplayDate').innerText = formattedDate;
+
+                document.getElementById('certificateModal').classList.remove('hidden');
+                particleEngine.burst(window.innerWidth / 2, window.innerHeight / 3, 70);
+                soundEngine.playLevelUp();
+            }
+
+            closeCertificateModal() {
+                document.getElementById('certificateModal').classList.add('hidden');
+            }
+
+            navigateTo(moduleKey) {
+                soundEngine.playClick();
+
+                if (moduleKey !== 'dashboard' && !this.isModuleUnlocked(moduleKey)) {
+                    this.speakLumiere("🔒 Ce défi est encore verrouillé ! Tu dois réussir le défi précédent pour y accéder !", "thinking");
+                    soundEngine.playWrong();
+                    return;
+                }
+
+                this.currentModule = moduleKey;
+                const main = document.getElementById('mainContent');
+
+                if (this.state.hearts === 0 && moduleKey !== 'dashboard') {
+                    this.showGameOverModal();
+                    return;
+                }
+
+                switch (moduleKey) {
+                    case 'dashboard':
+                        this.renderDashboard(main);
+                        this.speakLumiere("Bienvenue au Hub Central Cyber ! Réussis chaque défi pour débloquer le suivant ! 🚀✨", "happy");
+                        break;
+                    case 'module1':
+                        this.renderModule1(main);
+                        this.speakLumiere("Módulo 1 : Cristal du Futur Simple ! Remplis les verbes au futur simple ! 🔮✍️", "thinking");
+                        break;
+                    case 'module2':
+                        this.renderModule2(main);
+                        this.speakLumiere("Módulo 2 : Dards d'Objet ! Vise le bon pronom COD (le/la/les) ou COI (lui/leur) ! 🎯🏷️", "thinking");
+                        break;
+                    case 'module3':
+                        this.renderModule3(main);
+                        this.speakLumiere("Módulo 3 : Vocabulaire Cyber ! Découvre le mot en espagnol et choisis le mot correct en français ! 💻💾", "cheering");
+                        break;
+                    case 'module4':
+                        this.renderModule4(main);
+                        this.speakLumiere("Módulo 4 : Chat Y & EN ! Choisis la réponse conversante congruente avec Y ou EN ! 🤖💬", "happy");
+                        break;
+                    case 'module5':
+                        this.renderModule5(main);
+                        this.speakLumiere("Módulo 5 : Assemblage Futur Proche ! Connecte Sujet + ALLER + Infinitif pour décoller ! 🧩🚀", "cheering");
+                        break;
+                }
+            }
+
+            renderDashboard(container) {
+                const c = this.state.completedModules;
+                const completedCount = Object.values(c).filter(Boolean).length;
+
+                const u1 = true;
+                const u2 = this.isModuleUnlocked('module2');
+                const u3 = this.isModuleUnlocked('module3');
+                const u4 = this.isModuleUnlocked('module4');
+                const u5 = this.isModuleUnlocked('module5');
+
+                container.innerHTML = `
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- MODULE 1 CARD -->
+                        <div onclick="app.navigateTo('module1')" class="glass-panel glass-button rounded-3xl p-6 ${c.m1 ? 'border-emerald-400 bg-emerald-950/20' : 'border-amber-500/30'} cursor-pointer relative group overflow-hidden">
+                            <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-amber-500/10 rounded-full blur-xl group-hover:bg-amber-500/20 transition"></div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-3xl shadow-inner">
+                                    🔮
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-black ${c.m1 ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-400' : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'}">
+                                    ${c.m1 ? 'Completé ✅' : 'Défi 1 ✍️'}
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-extrabold heading-font text-white group-hover:text-amber-300 transition flex items-center gap-2">
+                                <span>🔮 Le Cristal du Futur Simple</span>
+                            </h3>
+                            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                                Forge les conjugaisons du temps futur (parlerai, finiras, voyagera) avec le stylo temporel !
+                            </p>
+                            <div class="mt-6 flex items-center justify-between text-xs font-bold text-amber-400">
+                                <span>7 Verbes Chrono ⏳</span>
+                                <span class="group-hover:translate-x-1 transition">Jouer ➔</span>
+                            </div>
+                        </div>
+
+                        <!-- MODULE 2 CARD -->
+                        <div onclick="app.navigateTo('module2')" class="glass-panel ${u2 ? 'glass-button cursor-pointer' : 'opacity-60 cursor-not-allowed'} rounded-3xl p-6 ${c.m2 ? 'border-emerald-400 bg-emerald-950/20' : 'border-rose-500/30'} relative group overflow-hidden">
+                            <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-rose-500/10 rounded-full blur-xl group-hover:bg-rose-500/20 transition"></div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-14 h-14 rounded-2xl bg-rose-500/20 border border-rose-500/40 flex items-center justify-center text-3xl shadow-inner">
+                                    ${u2 ? '🎯' : '🔒'}
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-black ${c.m2 ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-400' : (u2 ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30' : 'bg-slate-800 text-slate-400 border border-white/10')}">
+                                    ${c.m2 ? 'Completé ✅' : (u2 ? 'Défi 2 🏷️' : 'Verrouillé 🔒')}
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-extrabold heading-font text-white group-hover:text-rose-300 transition flex items-center gap-2">
+                                <span>🎯 Dards d'Objet (COD & COI)</span>
+                            </h3>
+                            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                                Vise avec précision ! Remplace les compléments direct/indirect par (le, la, les, lui, leur).
+                            </p>
+                            <div class="mt-6 flex items-center justify-between text-xs font-bold ${u2 ? 'text-rose-400' : 'text-slate-500'}">
+                                <span>${u2 ? 'Lancement Précision 🎯' : 'Réussir Défi 1 pour débloquer 🔒'}</span>
+                                <span>${u2 ? 'Jouer ➔' : '🔒'}</span>
+                            </div>
+                        </div>
+
+                        <!-- MODULE 3 CARD -->
+                        <div onclick="app.navigateTo('module3')" class="glass-panel ${u3 ? 'glass-button cursor-pointer' : 'opacity-60 cursor-not-allowed'} rounded-3xl p-6 ${c.m3 ? 'border-emerald-400 bg-emerald-950/20' : 'border-cyan-500/30'} relative group overflow-hidden">
+                            <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-cyan-500/10 rounded-full blur-xl group-hover:bg-cyan-500/20 transition"></div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-14 h-14 rounded-2xl bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-3xl shadow-inner">
+                                    ${u3 ? '💻' : '🔒'}
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-black ${c.m3 ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-400' : (u3 ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30' : 'bg-slate-800 text-slate-400 border border-white/10')}">
+                                    ${c.m3 ? 'Completé ✅' : (u3 ? 'Défi 3 🌐' : 'Verrouillé 🔒')}
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-extrabold heading-font text-white group-hover:text-cyan-300 transition flex items-center gap-2">
+                                <span>💻 Vocabulaire Cyber High-Tech</span>
+                            </h3>
+                            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                                Traduis du français/espagnol avec pièges & distractores (Ordinatair, Réseau, Mémoire).
+                            </p>
+                            <div class="mt-6 flex items-center justify-between text-xs font-bold ${u3 ? 'text-cyan-400' : 'text-slate-500'}">
+                                <span>${u3 ? 'Quiz Vocabulaire 💾' : 'Réussir Défi 2 pour débloquer 🔒'}</span>
+                                <span>${u3 ? 'Jouer ➔' : '🔒'}</span>
+                            </div>
+                        </div>
+
+                        <!-- MODULE 4 CARD -->
+                        <div onclick="app.navigateTo('module4')" class="glass-panel ${u4 ? 'glass-button cursor-pointer' : 'opacity-60 cursor-not-allowed'} rounded-3xl p-6 ${c.m4 ? 'border-emerald-400 bg-emerald-950/20' : 'border-purple-500/30'} relative group overflow-hidden">
+                            <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-purple-500/10 rounded-full blur-xl group-hover:bg-purple-500/20 transition"></div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-3xl shadow-inner">
+                                    ${u4 ? '🤖' : '🔒'}
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-black ${c.m4 ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-400' : (u4 ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30' : 'bg-slate-800 text-slate-400 border border-white/10')}">
+                                    ${c.m4 ? 'Completé ✅' : (u4 ? 'Défi 4 💬' : 'Verrouillé 🔒')}
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-extrabold heading-font text-white group-hover:text-purple-300 transition flex items-center gap-2">
+                                <span>🤖 Mini-Chat "Y" et "EN"</span>
+                            </h3>
+                            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                                Dialogue interactif avec Lumière ! Choisis la réponse congruente avec Y (lieu) et EN (quantité).
+                            </p>
+                            <div class="mt-6 flex items-center justify-between text-xs font-bold ${u4 ? 'text-purple-400' : 'text-slate-500'}">
+                                <span>${u4 ? 'Simulateur IA Chat 💬' : 'Réussir Défi 3 pour débloquer 🔒'}</span>
+                                <span>${u4 ? 'Jouer ➔' : '🔒'}</span>
+                            </div>
+                        </div>
+
+                        <!-- MODULE 5 CARD -->
+                        <div onclick="app.navigateTo('module5')" class="glass-panel ${u5 ? 'glass-button cursor-pointer' : 'opacity-60 cursor-not-allowed'} rounded-3xl p-6 ${c.m5 ? 'border-emerald-400 bg-emerald-950/20' : 'border-emerald-500/30'} relative group overflow-hidden">
+                            <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-emerald-500/10 rounded-full blur-xl group-hover:bg-emerald-500/20 transition"></div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-3xl shadow-inner">
+                                    ${u5 ? '🧩' : '🔒'}
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-black ${c.m5 ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-400' : (u5 ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-slate-800 text-slate-400 border border-white/10')}">
+                                    ${c.m5 ? 'Completé ✅' : (u5 ? 'Défi 5 🚀' : 'Verrouillé 🔒')}
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-extrabold heading-font text-white group-hover:text-emerald-300 transition flex items-center gap-2">
+                                <span>🧩 Assemblage Futur Proche</span>
+                            </h3>
+                            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                                Ordonne les mots mélangés : [Sujet] + [Aller] + [Infinitif] pour déclencher le décollage.
+                            </p>
+                            <div class="mt-6 flex items-center justify-between text-xs font-bold ${u5 ? 'text-emerald-400' : 'text-slate-500'}">
+                                <span>${u5 ? 'Puzzle de Fusée 🚀' : 'Réussir Défi 4 pour débloquer 🔒'}</span>
+                                <span>${u5 ? 'Jouer ➔' : '🔒'}</span>
+                            </div>
+                        </div>
+
+                        <!-- CERTIFICATE DISPLAY CARD -->
+                        <div onclick="app.openCertificateFlow()" class="glass-panel glass-button rounded-3xl p-6 border-amber-400/50 cursor-pointer relative group overflow-hidden flex flex-col justify-between bg-gradient-to-br from-amber-500/10 to-purple-500/10">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-3xl">
+                                        🎓
+                                    </div>
+                                    <span class="px-3 py-1 rounded-full text-xs font-black ${completedCount === 5 ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-400' : 'bg-amber-400/20 text-amber-300 border border-amber-400/40'}">
+                                        ${completedCount === 5 ? 'Certificat Prêt ✅' : `Progression: ${completedCount}/5`}
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-extrabold heading-font gold-gradient-text">
+                                     Certificat Global de Maîtrise
+                                </h3>
+                                <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                                    Obtiens ton diplôme officiel une fois TOUS les 5 défis du protocole réussis !
+                                </p>
+                            </div>
+                            <div class="mt-6 flex items-center justify-between text-xs font-black text-amber-300 uppercase tracking-wider">
+                                <span>${completedCount === 5 ? 'Générer Mon Certificat 🎓' : 'Compléter les 5 défiss 🔒'}</span>
+                                <span class="group-hover:translate-x-1 transition">➔</span>
+                            </div>
+                        </div>
+
+                    </div>
+                `;
+            }
+
+            getModule1Questions() {
+                return [
+                    { prompt: "Demain, nous ________ (travailler) sur le réseau cybernétique.", answer: "travaillerons", hint: "Infinitif 'travailler' + terminaison '-ons' !" },
+                    { prompt: "Dans le futur, tu ________ (voyager) vers les étoiles.", answer: "voyageras", hint: "Sujet 'tu' -> terminaison '-as' !" },
+                    { prompt: "L'IA Lumière ________ (répondre) à toutes nos questions.", answer: "répondra", hint: "Sujet 'il/elle' -> 'répondr' + '-a' !" },
+                    { prompt: "J' ________ (acheter) un nouvel ordinateur quantique.", answer: "acheterai", hint: "J' + infinitif 'acheter' + '-ai' !" },
+                    { prompt: "Ils ________ (explorer) la cité solaire du XXIe siècle.", answer: "exploreront", hint: "Sujet 'ils' -> terminaison '-ont' !" },
+                    { prompt: "Vous ________ (visiter) la station spatiale.", answer: "visiterez", hint: "Sujet 'vous' -> terminaison '-ez' !" },
+                    { prompt: "Elle ________ (apprendre) le code quantique.", answer: "apprendra", hint: "Sujet 'elle' -> 'apprendr' + '-a' !" }
+                ];
+            }
+
+            renderModule1(container) {
+                const questions = this.getModule1Questions();
+
+                if (!this.moduleStates.m1) {
+                    this.moduleStates.m1 = { step: 0 };
+                }
+
+                const state = this.moduleStates.m1;
+                const q = questions[state.step];
+
+                if (!q) {
+                    this.state.completedModules.m1 = true;
+                    this.saveState();
+                    this.unlockBadge('futur_master');
+                    container.innerHTML = `
+                        <div class="glass-panel max-w-xl mx-auto rounded-3xl p-8 text-center border-amber-500/40 animate-pulse-glow">
+                            <div class="text-6xl mb-4">🔮✨</div>
+                            <h2 class="text-3xl font-black heading-font solar-gradient-text">Cristal Harmonisé !</h2>
+                            <p class="text-slate-300 mt-2">Tu as maîtrisé le Défi 1 (Futur Simple) ! Le Défi 2 est maintenant débloqué ! (+50 XP)</p>
+                            <button onclick="app.addXP(50); app.moduleStates.m1.step=0; app.navigateTo('dashboard');" class="mt-6 cyber-gradient-btn px-8 py-3 rounded-2xl text-black font-extrabold">
+                                Continuer vers le Hub 🚀
+                            </button>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = `
+                    <div class="glass-panel max-w-2xl mx-auto rounded-3xl p-6 sm:p-8 border-amber-500/30">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-3xl">🔮</span>
+                                <div>
+                                    <h3 class="text-xl font-black text-amber-300 heading-font">Módulo 1 : Futur Simple</h3>
+                                    <p class="text-xs text-slate-400">Étape ${state.step + 1} sur ${questions.length} ✍️🔮</p>
+                                </div>
+                            </div>
+                            <button onclick="app.navigateTo('dashboard')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-xl text-slate-300">
+                                🏠 Quitter
+                            </button>
+                        </div>
+
+                        <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 mb-6 text-xs text-amber-200 flex items-start gap-3">
+                            <span class="text-xl">✍️</span>
+                            <div>
+                                <strong class="font-bold">Règle du Cristal :</strong> En français, le Futur Simple se forme avec l'<strong>Infinitif</strong> + les terminaisons : <em>-ai, -as, -a, -ons, -ez, -ont</em> !
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900/60 p-6 rounded-2xl border border-white/10 mb-6 text-center">
+                            <p class="text-lg font-medium text-slate-100">${q.prompt.replace('________', `<span class="underline underline-offset-8 text-amber-400 font-extrabold">________</span>`)}</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-300 mb-2">Écris la bonne forme du verbe au Futur Simple :</label>
+                                <input type="text" id="m1Input" onkeydown="if(event.key === 'Enter') app.checkCurrentM1()" placeholder="Exemple: travaillerons" class="w-full bg-slate-950 border border-amber-500/40 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 text-lg font-bold">
+                            </div>
+
+                            <div id="m1Feedback" class="hidden p-3 rounded-xl text-sm font-bold"></div>
+
+                            <div class="flex items-center justify-between gap-4 pt-2">
+                                <button onclick="app.speakCurrentM1Hint()" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs text-cyan-300 font-bold flex items-center gap-1">
+                                    💡 Indice
+                                </button>
+                                <button onclick="app.checkCurrentM1()" class="cyber-gradient-btn px-6 py-3 rounded-xl text-black font-extrabold text-sm flex-1">
+                                    Valider le Verbe 🔮
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            speakCurrentM1Hint() {
+                const questions = this.getModule1Questions();
+                const q = questions[this.moduleStates.m1.step];
+                if (q) this.speakLumiere(q.hint, 'thinking');
+            }
+
+            checkCurrentM1() {
+                const questions = this.getModule1Questions();
+                const q = questions[this.moduleStates.m1.step];
+                if (q) this.checkModule1(q.answer);
+            }
+
+            checkModule1(correct) {
+                const input = document.getElementById('m1Input');
+                const val = input.value.trim().toLowerCase();
+                const feedback = document.getElementById('m1Feedback');
+
+                if (val === correct.toLowerCase()) {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-emerald-500/20 border border-emerald-500/40 text-emerald-300";
+                    feedback.innerHTML = "✅ Parfait ! Le cristal de temps s'illumine ! (+10 XP)";
+                    feedback.classList.remove('hidden');
+                    this.addXP(10);
+                    setTimeout(() => {
+                        this.moduleStates.m1.step++;
+                        this.renderModule1(document.getElementById('mainContent'));
+                    }, 1200);
+                } else {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-rose-500/20 border border-rose-500/40 text-rose-300";
+                    feedback.innerHTML = `❌ Oups ! La bonne réponse était <strong>${correct}</strong>.`;
+                    feedback.classList.remove('hidden');
+                    this.loseLife();
+                }
+            }
+
+            getModule2Questions() {
+                return [
+                    { sentence: "Je vois **le robot Lumière**.", type: "COD (Masculin singulier)", options: ["le", "la", "les", "lui"], correct: "le", explain: "Le robot est masculin singulier -> Je LE vois." },
+                    { sentence: "Il parle **à sa collègue**.", type: "COI (Personne singulier)", options: ["la", "lui", "leur", "y"], correct: "lui", explain: "À sa collègue est un COI singulier -> Il LUI parle." },
+                    { sentence: "Nous téléchargeons **les fichiers cyber**.", type: "COD (Pluriel)", options: ["leur", "les", "y", "en"], correct: "les", explain: "Les fichiers est un COD pluriel -> Nous LES téléchargeons." },
+                    { sentence: "Elle écrit un message **à ses amis**.", type: "COI (Pluriel)", options: ["les", "lui", "leur", "en"], correct: "leur", explain: "À ses amis est un COI pluriel -> Elle LEUR écrit." },
+                    { sentence: "Tu écoutes **la musique futuriste**.", type: "COD (Féminin singulier)", options: ["la", "le", "lui", "y"], correct: "la", explain: "La musique est un COD féminin -> Tu LA écoutes." },
+                    { sentence: "Vous envoyez le message **à vos professeurs**.", type: "COI (Pluriel)", options: ["les", "lui", "leur", "y"], correct: "leur", explain: "À vos professeurs est un COI pluriel -> Vous LEUR envoyez." },
+                    { sentence: "Il regarde **la carte holographique**.", type: "COD (Féminin singulier)", options: ["la", "le", "lui", "en"], correct: "la", explain: "La carte est un COD féminin -> Il LA regarde." }
+                ];
+            }
+
+            renderModule2(container) {
+                const questions = this.getModule2Questions();
+
+                if (!this.moduleStates.m2) {
+                    this.moduleStates.m2 = { step: 0 };
+                }
+
+                const state = this.moduleStates.m2;
+                const q = questions[state.step];
+
+                if (!q) {
+                    this.state.completedModules.m2 = true;
+                    this.saveState();
+                    this.unlockBadge('pronoun_sniper');
+                    container.innerHTML = `
+                        <div class="glass-panel max-w-xl mx-auto rounded-3xl p-8 text-center border-rose-500/40 animate-pulse-glow">
+                            <div class="text-6xl mb-4">🎯🏷️</div>
+                            <h2 class="text-3xl font-black heading-font text-rose-400">Tir de Précision Réussi !</h2>
+                            <p class="text-slate-300 mt-2">Tu as maîtrisé le Défi 2 (COD & COI) ! Le Défi 3 est débloqué ! (+50 XP)</p>
+                            <button onclick="app.addXP(50); app.moduleStates.m2.step=0; app.navigateTo('dashboard');" class="mt-6 cyber-gradient-btn px-8 py-3 rounded-2xl text-black font-extrabold">
+                                Continuer vers le Hub 🚀
+                            </button>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = `
+                    <div class="glass-panel max-w-2xl mx-auto rounded-3xl p-6 sm:p-8 border-rose-500/30">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-3xl">🎯</span>
+                                <div>
+                                    <h3 class="text-xl font-black text-rose-300 heading-font">Módulo 2 : COD & COI</h3>
+                                    <p class="text-xs text-slate-400">Étape ${state.step + 1} sur ${questions.length} 🎯🏷️</p>
+                                </div>
+                            </div>
+                            <button onclick="app.navigateTo('dashboard')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-xl text-slate-300">
+                                🏠 Quitter
+                            </button>
+                        </div>
+
+                        <div class="bg-rose-500/10 border border-rose-500/30 rounded-2xl p-4 mb-6 text-xs text-rose-200">
+                            <strong>💡 Mémo COD/COI :</strong><br>
+                            - <strong>COD</strong> (Quoi/Qui ?) : <em>le, la, les</em> (Je <u>le</u> vois).<br>
+                            - <strong>COI</strong> (À qui ?) : <em>lui</em> (à lui/elle), <em>leur</em> (à eux/elles) (Je <u>lui</u> parle).
+                        </div>
+
+                        <div class="bg-slate-900/60 p-6 rounded-2xl border border-white/10 mb-6 text-center">
+                            <span class="text-xs font-bold uppercase tracking-widest text-rose-400 block mb-2">${q.type}</span>
+                            <p class="text-xl font-bold text-white">${q.sentence}</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            ${q.options.map(opt => `
+                                <button onclick="app.checkModule2('${opt}')" class="glass-button p-4 rounded-2xl text-xl font-black text-amber-300 border border-white/10 hover:border-rose-400 flex items-center justify-center gap-2">
+                                    🎯 <span>${opt}</span>
+                                </button>
+                            `).join('')}
+                        </div>
+
+                        <div id="m2Feedback" class="hidden p-3 rounded-xl text-sm font-bold text-center"></div>
+                    </div>
+                `;
+            }
+
+            checkModule2(chosen) {
+                const questions = this.getModule2Questions();
+                
+                const q = questions[this.moduleStates.m2.step];
+                const feedback = document.getElementById('m2Feedback');
+
+                if (chosen === q.correct) {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-emerald-500/20 border border-emerald-500/40 text-emerald-300";
+                    feedback.innerHTML = `✅ DARD EN PLEIN CENTRE ! ${q.explain} (+10 XP)`;
+                    feedback.classList.remove('hidden');
+                    this.addXP(10);
+                    setTimeout(() => {
+                        this.moduleStates.m2.step++;
+                        this.renderModule2(document.getElementById('mainContent'));
+                    }, 1400);
+                } else {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-rose-500/20 border border-rose-500/40 text-rose-300";
+                    feedback.innerHTML = `❌ Cible manquée ! La bonne réponse était <strong>${q.correct}</strong>.`;
+                    feedback.classList.remove('hidden');
+                    this.loseLife();
+                }
+            }
+
+            getModule3Questions() {
+                return [
+                    {
+                        spanish: "Computadora",
+                        correct: "l'ordinateur",
+                        options: ["l'ordinateur", "l'ordinatair", "l'ordinatrice", "l'ordinateurio"],
+                        hint: "Attention à la terminaison '-eur' !"
+                    },
+                    {
+                        spanish: "Red / Network",
+                        correct: "le réseau",
+                        options: ["le réso", "le réseau", "le réssau", "le réseau-net"],
+                        hint: "Contient le son '-eau' en français !"
+                    },
+                    {
+                        spanish: "Descargar / Download",
+                        correct: "télécharger",
+                        options: ["téléchargear", "téléchargerment", "télécharger", "téléchargier"],
+                        hint: "Verbe du 1er groupe terminant en -er."
+                    },
+                    {
+                        spanish: "Futuro / Avenir",
+                        correct: "l'avenir",
+                        options: ["l'avenire", "l'advenir", "l'avenir", "l'avenir-futur"],
+                        hint: "S'écrit sans 'e' à la fin !"
+                    },
+                    {
+                        spanish: "Trabajar / Work",
+                        correct: "travailler",
+                        options: ["travaillier", "travailler", "travaillerment", "travaillair"],
+                        hint: "Contient '-iller' !"
+                    },
+                    {
+                        spanish: "Memoria / Memory",
+                        correct: "la mémoire",
+                        options: ["la mémoir", "la memorie", "la mémoire", "la mémoirique"],
+                        hint: "Nom féminin se terminant par '-oire'."
+                    },
+                    {
+                        spanish: "Pantalla / Screen",
+                        correct: "l'écran",
+                        options: ["l'écran", "l'écrand", "l'écranne", "l'écrano"],
+                        hint: "Mot masculin se terminant par -an."
+                    },
+                    {
+                        spanish: "Teclado / Keyboard",
+                        correct: "le clavier",
+                        options: ["le clavier", "le claviar", "le claviere", "le clavment"],
+                        hint: "Mot masculin se terminant par -ier."
+                    }
+                ];
+            }
+
+            renderModule3(container) {
+                const quizData = this.getModule3Questions();
+
+                if (!this.moduleStates.m3) {
+                    this.moduleStates.m3 = { step: 0 };
+                }
+
+                const state = this.moduleStates.m3;
+                const q = quizData[state.step];
+
+                if (!q) {
+                    this.state.completedModules.m3 = true;
+                    this.saveState();
+                    this.unlockBadge('cyber_linguist');
+                    container.innerHTML = `
+                        <div class="glass-panel max-w-xl mx-auto rounded-3xl p-8 text-center border-cyan-500/40 animate-pulse-glow">
+                            <div class="text-6xl mb-4">💻⚡</div>
+                            <h2 class="text-3xl font-black heading-font text-cyan-300">Cyber-Vocabulaire Dominé !</h2>
+                            <p class="text-slate-300 mt-2">Tu as maîtrisé le Défi 3 ! Le Défi 4 est débloqué ! (+50 XP)</p>
+                            <button onclick="app.addXP(50); app.moduleStates.m3.step=0; app.navigateTo('dashboard');" class="mt-6 cyber-gradient-btn px-8 py-3 rounded-2xl text-black font-extrabold">
+                                Continuer vers le Hub 🚀
+                            </button>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = `
+                    <div class="glass-panel max-w-2xl mx-auto rounded-3xl p-6 sm:p-8 border-cyan-500/30">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-3xl">💻</span>
+                                <div>
+                                    <h3 class="text-xl font-black text-cyan-300 heading-font">Módulo 3 : Vocabulaire Cyber & Pièges</h3>
+                                    <p class="text-xs text-slate-400">Étape ${state.step + 1} sur ${quizData.length} 💻💾</p>
+                                </div>
+                            </div>
+                            <button onclick="app.navigateTo('dashboard')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-xl text-slate-300">
+                                🏠 Quitter
+                            </button>
+                        </div>
+
+                        <!-- Spanish Target Box -->
+                        <div class="bg-slate-900/80 p-6 rounded-2xl border border-cyan-500/40 mb-6 text-center">
+                            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400 block mb-1">Palabra en Español / Word:</span>
+                            <h4 class="text-3xl font-black text-white">${q.spanish}</h4>
+                            <p class="text-xs text-slate-400 mt-2">Choisis la traduction exacte en français parmi les distracteurs :</p>
+                        </div>
+
+                        <!-- Distractor Choices Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            ${q.options.map((opt, idx) => `
+                                <button onclick="app.checkModule3(${idx})" class="glass-button p-4 rounded-2xl text-lg font-bold text-cyan-200 border border-white/10 hover:border-amber-400 flex items-center justify-between">
+                                    <span>${opt}</span>
+                                    <span class="text-xs bg-slate-800 px-2 py-1 rounded text-amber-300">🔊</span>
+                                </button>
+                            `).join('')}
+                        </div>
+
+                        <div id="m3Feedback" class="hidden p-3 rounded-xl text-sm font-bold text-center mb-4"></div>
+
+                        <div class="flex justify-between items-center">
+                            <button onclick="app.speakLumiere('${q.hint}', 'thinking')" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs text-amber-300 font-bold flex items-center gap-1">
+                                💡 Indice Anti-Piège
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            checkModule3(chosenIdx) {
+                const quizData = this.getModule3Questions();
+
+                const q = quizData[this.moduleStates.m3.step];
+                const chosen = q.options[chosenIdx];
+                const correct = q.correct;
+                const feedback = document.getElementById('m3Feedback');
+
+                if ('speechSynthesis' in window) {
+                    const u = new SpeechSynthesisUtterance(chosen);
+                    u.lang = 'fr-FR';
+                    window.speechSynthesis.speak(u);
+                }
+
+                if (chosen === correct) {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-emerald-500/20 border border-emerald-500/40 text-emerald-300";
+                    feedback.innerHTML = `✅ EXCELLENT ! "${chosen}" est la traduction exacte ! (+10 XP)`;
+                    feedback.classList.remove('hidden');
+                    this.addXP(10);
+                    setTimeout(() => {
+                        this.moduleStates.m3.step++;
+                        this.renderModule3(document.getElementById('mainContent'));
+                    }, 1300);
+                } else {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-rose-500/20 border border-rose-500/40 text-rose-300";
+                    feedback.innerHTML = `❌ PIÈGE DÉTECTÉ ! "${chosen}" est un faux mot. La bonne réponse est <strong>${correct}</strong>.`;
+                    feedback.classList.remove('hidden');
+                    this.loseLife();
+                }
+            }
+
+            getModule4Questions() {
+                return [
+                    {
+                        bot: "Bonjour ! Vas-tu **à la cité futuriste** aujourd'hui ? 🏙️",
+                        hint: "Remplace 'à la cité' par le pronom de lieu **Y** dans une réponse congruente !",
+                        options: [
+                            { text: "Oui, j'y vais tout de suite !", correct: true, explain: "Congruent et utilise Y (à la cité)." },
+                            { text: "Oui, j'en mange deux.", correct: false, explain: "Incongruent ('manger' n'a pas de sens)." },
+                            { text: "Non, je lui parle demain.", correct: false, explain: "Mauvais pronom (LUI est pour les personnes)." },
+                            { text: "J'y achète une pomme.", correct: false, explain: "Moins naturel que 'j'y vais'." }
+                        ]
+                    },
+                    {
+                        bot: "Génial ! Et as-tu besoin **de données cybernétiques** pour ton projet ? 💾",
+                        hint: "Remplace 'de données' par le pronom de quantité/de **EN** !",
+                        options: [
+                            { text: "Oui, j'en ai besoin pour le système.", correct: true, explain: "Congruent et utilise EN (de données)." },
+                            { text: "Oui, j'y habite depuis un an.", correct: false, explain: "Incongruent (Y est pour les lieux)." },
+                            { text: "Non, je les téléphone ce soir.", correct: false, explain: "Mauvais verbe et pronom." },
+                            { text: "J'en voyage rapidement.", correct: false, explain: "Incongruent avec le verbe voyager." }
+                        ]
+                    },
+                    {
+                        bot: "Parfait ! Réfléchis-tu **à ton avenir** dans le protocole ? 🔮",
+                        hint: "À + idée abstraite = **Y** (J'y réfléchis) !",
+                        options: [
+                            { text: "Oui, j'y réfléchis tous les jours !", correct: true, explain: "Congruent et utilise Y (à ton avenir)." },
+                            { text: "Oui, j'en achète trois kilos.", correct: false, explain: "Incongruent (EN est pour les quantités)." },
+                            { text: "Non, je leur réponds plus tard.", correct: false, explain: "Mauvais pronom COI pluriel." },
+                            { text: "Je l'écoute à la radio.", correct: false, explain: "Hors sujet." }
+                        ]
+                    },
+                    {
+                        bot: "Est-ce que tu penses **à cette mission** ? 🚀",
+                        hint: "Penser à + chose = **Y** (J'y pense) !",
+                        options: [
+                            { text: "Oui, j'y pense constamment !", correct: true, explain: "Congruent et utilise Y (à cette mission)." },
+                            { text: "Oui, j'en mange trois.", correct: false, explain: "Incongruent ('manger' n'a pas de sens)." },
+                            { text: "Non, je leur parle plus tard.", correct: false, explain: "Mauvais pronom COI." },
+                            { text: "J'y achète un livre.", correct: false, explain: "Incongruent avec la question." }
+                        ]
+                    },
+                    {
+                        bot: "As-tu pris **du café futuriste** ce matin ? ☕",
+                        hint: "Du + chose = quantité/de = **EN** !",
+                        options: [
+                            { text: "Oui, j'en ai pris deux tasses !", correct: true, explain: "Congruent et utilise EN (du café)." },
+                            { text: "Oui, j'y habite encore.", correct: false, explain: "Incongruent (Y est pour les lieux)." },
+                            { text: "Non, je le téléphone.", correct: false, explain: "Mauvais pronom et verbe." },
+                            { text: "J'en regarde la télévision.", correct: false, explain: "Hors sujet." }
+                        ]
+                    }
+                ];
+            }
+
+            renderModule4(container) {
+                const dialogueScript = this.getModule4Questions();
+
+                if (!this.moduleStates.m4) {
+                    this.moduleStates.m4 = { step: 0 };
+                }
+
+                const state = this.moduleStates.m4;
+                const current = dialogueScript[state.step];
+
+                if (!current) {
+                    this.state.completedModules.m4 = true;
+                    this.saveState();
+                    this.unlockBadge('lumiere_friend');
+                    container.innerHTML = `
+                        <div class="glass-panel max-w-xl mx-auto rounded-3xl p-8 text-center border-purple-500/40 animate-pulse-glow">
+                            <div class="text-6xl mb-4">🤖💬</div>
+                            <h2 class="text-3xl font-black heading-font text-purple-300">Dialogue IA Réussi !</h2>
+                            <p class="text-slate-300 mt-2">Tu as maîtrisé le Défi 4 ! Le Défi final (5) est débloqué ! (+50 XP)</p>
+                            <button onclick="app.addXP(50); app.moduleStates.m4.step=0; app.navigateTo('dashboard');" class="mt-6 cyber-gradient-btn px-8 py-3 rounded-2xl text-black font-extrabold">
+                                Continuer vers le Hub 🚀
+                            </button>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Shuffle options for step so answer is not always position 1
+                if (!state.shuffledOptions) {
+                    const optsWithIndex = current.options.map((opt, origIdx) => ({ ...opt, origIdx }));
+                    optsWithIndex.sort(() => Math.random() - 0.5);
+                    state.shuffledOptions = optsWithIndex;
+                }
+
+                container.innerHTML = `
+                    <div class="glass-panel max-w-2xl mx-auto rounded-3xl p-6 sm:p-8 border-purple-500/30">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-3xl">🤖</span>
+                                <div>
+                                    <h3 class="text-xl font-black text-purple-300 heading-font">Módulo 4 : Chat "Y" & "EN"</h3>
+                                    <p class="text-xs text-slate-400">Étape ${state.step + 1} sur ${dialogueScript.length} 🤖💬</p>
+                                </div>
+                            </div>
+                            <button onclick="app.navigateTo('dashboard')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-xl text-slate-300">
+                                🏠 Quitter
+                            </button>
+                        </div>
+
+                        <div class="bg-purple-500/10 border border-purple-500/30 rounded-2xl p-4 mb-6 text-xs text-purple-200">
+                            <strong>💡 Guide Pronoms Adverbiaux :</strong><br>
+                            - <strong>Y</strong> : Remplace un lieu ou une idée introduite par <em>à, en, dans</em> (Ex: J'y vais).<br>
+                            - <strong>EN</strong> : Remplace une quantité ou une chose introduite par <em>de, du, des</em> (Ex: J'en ai besoin).
+                        </div>
+
+                        <!-- Chat Messages Container -->
+                        <div class="bg-slate-950/80 p-4 rounded-2xl border border-white/10 min-h-[120px] mb-6 flex flex-col justify-end space-y-3">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-purple-500 flex items-center justify-center text-xl font-bold flex-shrink-0">🤖</div>
+                                <div class="bg-slate-800 p-3.5 rounded-2xl rounded-tl-none border border-cyan-500/30 text-sm text-slate-100">
+                                    ${current.bot}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Congruent Answer Options -->
+                        <div class="space-y-3 mb-6">
+                            <label class="block text-xs font-bold text-slate-300 mb-1">Choisis la réponse conversante congruente :</label>
+                            ${state.shuffledOptions.map((opt, idx) => `
+                                <button onclick="app.checkModule4(${idx})" class="w-full text-left glass-button p-4 rounded-2xl text-sm font-bold text-purple-200 border border-white/10 hover:border-purple-400 flex items-center gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-300 flex items-center justify-center text-xs border border-purple-400/40">${idx + 1}</span>
+                                    <span>${opt.text}</span>
+                                </button>
+                            `).join('')}
+                        </div>
+
+                        <div id="m4Feedback" class="hidden p-3 rounded-xl text-sm font-bold text-center mb-4"></div>
+
+                        <div class="flex justify-between items-center">
+                            <button onclick="app.speakLumiere('${current.hint}', 'thinking')" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs text-purple-300 font-bold flex items-center gap-1">
+                                💡 Indice IA
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            checkModule4(chosenShuffledIdx) {
+                const state = this.moduleStates.m4;
+                const selected = state.shuffledOptions[chosenShuffledIdx];
+                const feedback = document.getElementById('m4Feedback');
+
+                if (selected.correct) {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-emerald-500/20 border border-emerald-500/40 text-emerald-300";
+                    feedback.innerHTML = `✅ C'est parfait ! "${selected.text}" est la réponse congruente ! (+15 XP)`;
+                    feedback.classList.remove('hidden');
+                    this.addXP(15);
+                    setTimeout(() => {
+                        state.step++;
+                        state.shuffledOptions = null;
+                        this.renderModule4(document.getElementById('mainContent'));
+                    }, 1300);
+                } else {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-rose-500/20 border border-rose-500/40 text-rose-300";
+                    feedback.innerHTML = `❌ Non congruente : ${selected.explain}`;
+                    feedback.classList.remove('hidden');
+                    this.loseLife();
+                }
+            }
+
+            getModule5Questions() {
+                return [
+                    { blocks: ["Je", "vais", "explorer", "la cité spatiale 🚀"], full: "Je vais explorer la cité spatiale 🚀" },
+                    { blocks: ["Nous", "allons", "travailler", "ensemble 🤝"], full: "Nous allons travailler ensemble 🤝" },
+                    { blocks: ["Tu", "vas", "télécharger", "le programme 💾"], full: "Tu vas télécharger le programme 💾" },
+                    { blocks: ["Elles", "vont", "voyager", "vers l'avenir 🔮"], full: "Elles vont voyager vers l'avenir 🔮" },
+                    { blocks: ["Vous", "allez", "créer", "une IA 🤖"], full: "Vous allez créer une IA 🤖" },
+                    { blocks: ["Il", "va", "activer", "le système ⚡"], full: "Il va activer le système ⚡" }
+                ];
+            }
+
+            renderModule5(container) {
+                const puzzles = this.getModule5Questions();
+
+                if (!this.moduleStates.m5) {
+                    this.moduleStates.m5 = { step: 0, currentAssembly: [] };
+                }
+
+                const state = this.moduleStates.m5;
+                const p = puzzles[state.step];
+
+                if (!p) {
+                    this.state.completedModules.m5 = true;
+                    this.saveState();
+                    this.unlockBadge('rocket_builder');
+                    container.innerHTML = `
+                        <div class="glass-panel max-w-xl mx-auto rounded-3xl p-8 text-center border-emerald-500/40 animate-pulse-glow">
+                            <div class="text-6xl mb-4">🎓🚀</div>
+                            <h2 class="text-3xl font-black heading-font text-emerald-300">PROTOCOLE COMPLÉTÉ À 100% !</h2>
+                            <p class="text-slate-300 mt-2">Félicitations ! Tu as réussi TOUS les 5 défis du Protocole Futuriste ! Ton Certificat est débloqué ! (+50 XP)</p>
+                            <button onclick="app.addXP(50); app.moduleStates.m5.step=0; app.openCertificateFlow();" class="mt-6 cyber-gradient-btn px-8 py-3 rounded-2xl text-black font-extrabold text-base">
+                                Obtenir mon Certificat 🎓📜
+                            </button>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Guaranteed shuffle function for phrase blocks
+                if (!state.shuffledBlocks) {
+                    let arr = [...p.blocks];
+                    let attempts = 0;
+                    while (attempts < 10) {
+                        arr.sort(() => Math.random() - 0.5);
+                        if (arr.join(' ') !== p.blocks.join(' ')) break;
+                        attempts++;
+                    }
+                    state.shuffledBlocks = arr;
+                }
+
+                container.innerHTML = `
+                    <div class="glass-panel max-w-2xl mx-auto rounded-3xl p-6 sm:p-8 border-emerald-500/30">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-3xl">🧩</span>
+                                <div>
+                                    <h3 class="text-xl font-black text-emerald-300 heading-font">Módulo 5 : Futur Proche Rocket</h3>
+                                    <p class="text-xs text-slate-400">Étape ${state.step + 1} sur ${puzzles.length} 🧩🚀</p>
+                                </div>
+                            </div>
+                            <button onclick="app.navigateTo('dashboard')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-xl text-slate-300">
+                                🏠 Quitter
+                            </button>
+                        </div>
+
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-4 mb-6 text-xs text-emerald-200">
+                            <strong>🚀 Formule du Futur Proche :</strong> [Sujet] + [Verbe ALLER au présent] + [Verbe à l'Infinitif] !
+                        </div>
+
+                        <!-- Assembly Slot Area -->
+                        <div class="bg-slate-950 p-6 rounded-2xl border border-dashed border-emerald-500/40 mb-6 text-center min-h-[80px] flex items-center justify-center flex-wrap gap-2">
+                            <span id="m5AssemblyText" class="text-lg font-bold text-amber-300">
+                                ${state.currentAssembly.length === 0 ? 'Clique sur les blocs ci-dessous dans le bon ordre 🚀' : state.currentAssembly.join(' ')}
+                            </span>
+                        </div>
+
+                        <!-- Shuffled Word Block Buttons -->
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            ${state.shuffledBlocks.map((b, idx) => `
+                                <button onclick="app.addRocketPiece(${idx})" class="glass-button p-4 rounded-xl text-base font-bold text-white border border-white/10 hover:border-emerald-400 flex items-center justify-between">
+                                    <span>🧩 ${b}</span>
+                                    <span class="text-xs text-emerald-400">➕</span>
+                                </button>
+                            `).join('')}
+                        </div>
+
+                        <div id="m5Feedback" class="hidden p-3 rounded-xl text-sm font-bold text-center mb-4"></div>
+
+                        <div class="flex items-center gap-3">
+                            <button onclick="app.resetRocketAssembly()" class="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">
+                                🔄 Réinitialiser
+                            </button>
+                            <button onclick="app.checkModule5()" class="cyber-gradient-btn px-6 py-3 rounded-xl text-black font-extrabold text-sm flex-1">
+                                Allumer les Moteurs 🚀
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            addRocketPiece(index) {
+                soundEngine.playClick();
+                const piece = this.moduleStates.m5.shuffledBlocks[index];
+                if (piece && !this.moduleStates.m5.currentAssembly.includes(piece)) {
+                    this.moduleStates.m5.currentAssembly.push(piece);
+                    document.getElementById('m5AssemblyText').innerText = this.moduleStates.m5.currentAssembly.join(' ');
+                }
+            }
+
+            resetRocketAssembly() {
+                soundEngine.playClick();
+                this.moduleStates.m5.currentAssembly = [];
+                document.getElementById('m5AssemblyText').innerText = 'Clique sur les blocs ci-dessous dans le bon ordre 🚀';
+            }
+
+            checkModule5() {
+                const puzzles = this.getModule5Questions();
+                const p = puzzles[this.moduleStates.m5.step];
+                if (!p) return;
+
+                const built = this.moduleStates.m5.currentAssembly.join(' ');
+                const feedback = document.getElementById('m5Feedback');
+
+                if (built.trim() === p.full.trim()) {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-emerald-500/20 border border-emerald-500/40 text-emerald-300";
+                    feedback.innerHTML = "🚀 DÉCOLLAGE RÉUSSI ! Moteurs du Futur Proche synchronisés ! (+15 XP)";
+                    feedback.classList.remove('hidden');
+                    this.addXP(15);
+                    setTimeout(() => {
+                        this.moduleStates.m5.step++;
+                        this.moduleStates.m5.currentAssembly = [];
+                        this.moduleStates.m5.shuffledBlocks = null;
+                        this.renderModule5(document.getElementById('mainContent'));
+                    }, 1400);
+                } else {
+                    feedback.className = "p-3 rounded-xl text-sm font-bold bg-rose-500/20 border border-rose-500/40 text-rose-300";
+                    feedback.innerHTML = `❌ Erreur d'assemblage ! Assure-toi de respecter : [Sujet] + [ALLER] + [Infinitif].`;
+                    feedback.classList.remove('hidden');
+                    this.loseLife();
+                }
+            }
+        }
+
+        let app;
+        window.addEventListener('DOMContentLoaded', () => {
+            app = new NeoFrancaisApp();
+        });
+    </script>
+</body>
+</html>
